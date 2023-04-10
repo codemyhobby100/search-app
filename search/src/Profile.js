@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const Profile = ({ name, bio, avatar }) => {
+const Profile = ({ id, title, firstName, lastName, picture }) => {
   return (
     <div className="profile">
-      <img src={avatar} alt={`${name} Avatar`} />
-      <h2>{name}</h2>
-      <p>{bio}</p>
+      <img src={picture} alt={`${firstName} ${lastName}`} />
+      <div className="details">
+        <h2>
+          {title}. {firstName} {lastName}
+        </h2>
+        <p>ID: {id}</p>
+      </div>
     </div>
   );
 };
